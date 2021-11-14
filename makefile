@@ -29,3 +29,7 @@ mysql:
 .PHONY: rails
 rails:
 	$(dc) exec rails /bin/sh
+	
+.PHONY: new
+new:
+	$(dc) run --no-deps rails rails new . --force --database=mysql
