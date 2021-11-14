@@ -36,3 +36,7 @@ rails:
 .PHONY: new
 new:
 	$(dc) run --no-deps rails rails new . --force --database=mysql
+	
+.PHONY: create
+create:
+	$(dc) exec rails rake db:create
